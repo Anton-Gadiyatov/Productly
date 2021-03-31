@@ -1,7 +1,11 @@
+@import "../node_modules/normalize-scss/sass/normalize";
+@include normalize();
 @import "abstract/constants";
+@import "abstract/placeholders";
 
 // Base
 @import "base/base";
+@import "base/logo";
 @import "base/buttons";
 
 // Layouts

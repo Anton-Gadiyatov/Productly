@@ -4,7 +4,7 @@
   "description": "practice project",
   "main": "index.js",
   "scripts": {
-    "style" : "sass --watch sass/style.scss sass/style.css",
+    "style": "sass --watch sass/style.scss sass/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Anton-Gadiyatov/Productly/issues"
   },
-  "homepage": "https://github.com/Anton-Gadiyatov/Productly#readme"
+  "homepage": "https://github.com/Anton-Gadiyatov/Productly#readme",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
 }
