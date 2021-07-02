@@ -103,5 +103,11 @@ const filterStrategiesBySelectedTag = (selectedTag) => {
 }
 
 const renderArticlesToDom = () => {
+  const strategiesWrapper = getStrategiesWrapper();
+}
 
+const getStrategiesWrapper = () => {
+  const strategiesContainer = document.querySelector('.strategy-wrapper');
+  strategiesContainer.innerHTML = '';
+  return strategiesContainer;
 }
