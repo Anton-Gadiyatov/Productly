@@ -104,10 +104,22 @@ const filterStrategiesBySelectedTag = (selectedTag) => {
 
 const renderArticlesToDom = () => {
   const strategiesWrapper = getStrategiesWrapper();
-}
+  generateArticles(data).forEach((article) => {
+    strategiesWrapper.append(article.generateArticle());
+  }
+  )}
 
 const getStrategiesWrapper = () => {
   const strategiesContainer = document.querySelector('.strategy-wrapper');
   strategiesContainer.innerHTML = '';
   return strategiesContainer;
 }
+
+const generateArticles = (data) => {
+  let articles = [];
+  data.forEach((article) => {
+    articles.push(new Article(article));
+  });
+  return articles;
+}
+
