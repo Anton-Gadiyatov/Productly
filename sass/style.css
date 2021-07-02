@@ -504,6 +504,14 @@ h3 {
   font-weight: bold;
   line-height: 3.4rem;
 }
+@media (max-width: 414px) {
+  h3 {
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 3.1rem;
+  }
+}
 
 h4 {
   font-size: 2.2rem;
@@ -1041,25 +1049,65 @@ h5 {
 .strategies__title {
   margin: 0 0 14px;
 }
+@media (max-width: 768px) {
+  .strategies__title {
+    text-align: center;
+  }
+}
 
 .strategies__description {
   margin: 0 0 24px;
+}
+@media (max-width: 768px) {
+  .strategies__description {
+    text-align: center;
+  }
 }
 
 .strategies__tags {
   margin-bottom: 31px;
 }
+@media (max-width: 768px) {
+  .strategies__tags {
+    justify-content: center;
+  }
+}
 
 .strategy-wrapper > * {
   margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .strategy-wrapper > * {
+    flex-basis: 48%;
+  }
+}
+@media (max-width: 414px) {
+  .strategy-wrapper > * {
+    flex-basis: 100%;
+  }
+}
+
+.strategy {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .strategy {
+    overflow: hidden;
+  }
+}
 
 .strategy__content {
   padding: 24px 33px 26px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .strategy__name {
   margin: 0 0 29px;
+  flex-grow: 1;
 }
 
 .about-us {
