@@ -1,3 +1,25 @@
+.tool-container {
+  @include media-tablet {
+    flex-wrap: wrap;
+    >.tool {
+      flex-basis: 43%;
+    }
+  }
+  @include media-mobile {
+    flex-wrap: wrap;
+    >.tool {
+      flex-basis: 100%;
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.tool {
+  @include media-tablet {
+    text-align: center;
+  }
+}
+
 .tool__icon {
   margin: 0 0 30px;
 }

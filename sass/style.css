@@ -1033,6 +1033,35 @@ h5 {
   margin-top: 60px;
   text-align: center;
 }
+@media (max-width: 414px) {
+  .tools__button {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .tool-container {
+    flex-wrap: wrap;
+  }
+  .tool-container > .tool {
+    flex-basis: 43%;
+  }
+}
+@media (max-width: 414px) {
+  .tool-container {
+    flex-wrap: wrap;
+  }
+  .tool-container > .tool {
+    flex-basis: 100%;
+    margin-bottom: 47px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tool {
+    text-align: center;
+  }
+}
 
 .tool__icon {
   margin: 0 0 30px;
