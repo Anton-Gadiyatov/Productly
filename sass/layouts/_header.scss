@@ -8,8 +8,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include media-tablet {
+    padding-left: 24px;
+  }
 }
 
-.header__buttons > .button:last-child {
-  margin-left: 14px;
+.header__logo-line {
+  display: flex;
+  align-items: center;
 }
+
+.header__buttons {
+  > .button:last-child {
+    margin-left: 14px;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+

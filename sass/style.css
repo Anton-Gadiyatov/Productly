@@ -555,6 +555,24 @@ h5 {
   margin-left: 9px;
 }
 
+.logo {
+  display: flex;
+}
+@media (max-width: 414px) {
+  .logo {
+    width: 160px;
+  }
+}
+
+@media (max-width: 414px) {
+  .logo-object {
+    width: 160px;
+  }
+}
+
+.logo-svg {
+  cursor: pointer;
+}
 .logo-svg:hover .logo-path {
   fill: #ff9900;
 }
@@ -676,10 +694,16 @@ h5 {
 }
 
 .hamburger {
-  display: inline-block;
+  display: none;
   position: relative;
   width: 31px;
   height: 25px;
+  margin-right: 37px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
 }
 .hamburger::before {
   top: 0;
@@ -716,9 +740,24 @@ h5 {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .header__wrapper {
+    padding-left: 24px;
+  }
+}
+
+.header__logo-line {
+  display: flex;
+  align-items: center;
+}
 
 .header__buttons > .button:last-child {
   margin-left: 14px;
+}
+@media (max-width: 414px) {
+  .header__buttons {
+    display: none;
+  }
 }
 
 .layout-4-column {
@@ -892,6 +931,12 @@ h5 {
 }
 .navigation__link a:hover {
   color: #ff9900;
+}
+
+@media (max-width: 768px) {
+  .header__navigation {
+    display: none;
+  }
 }
 
 .tools__wrapper {
