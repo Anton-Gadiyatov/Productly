@@ -1,4 +1,5 @@
 import { Article } from './js/Article.js'
+import { Modal } from './js/Modal.js'
 
 const data = [
   {
@@ -53,6 +54,9 @@ window.onload = function () {
 
   //Tags
   addTagsClickHandler();
+
+  //Generate Base Modal from Modal Class
+  addToolsClickHandler();
 };
 
 const addTagsClickHandler = () => {
@@ -123,3 +127,17 @@ const generateArticles = (data) => {
   return articles;
 }
 
+const addToolsClickHandler = () => {
+  document.querySelector('.tools__button .button').addEventListener('click', () => {
+    generateToolsModal();
+  })
+}
+
+const generateToolsModal = () => {
+  renderModalWindow('Test content for tools modal');
+}
+
+const renderModalWindow = (content) => {
+  let modal = new Modal('tools-modal');
+  modal.buildModal(content);
+}
