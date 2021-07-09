@@ -1,4 +1,5 @@
 import { Article } from './js/Article.js'
+import { ArticleModal } from './js/ArticleModal.js'
 import { Modal } from './js/Modal.js'
 
 const data = [
@@ -110,8 +111,10 @@ const renderArticlesToDom = () => {
   const strategiesWrapper = getStrategiesWrapper();
   generateArticles(data).forEach((article) => {
     strategiesWrapper.append(article.generateArticle());
-  }
-  )}
+  })
+
+  addStrategyClickHandler();
+}
 
 const getStrategiesWrapper = () => {
   const strategiesContainer = document.querySelector('.strategy-wrapper');
@@ -140,4 +143,24 @@ const generateToolsModal = () => {
 const renderModalWindow = (content) => {
   let modal = new Modal('tools-modal');
   modal.buildModal(content);
+}
+
+const addStrategyClickHandler = () => {
+  document.querySelector('.strategy-wrapper').addEventListener('click', (event) => {
+    if (event.target.closest('.strategy')) {
+      let clickedStrategyId = event.target.closest('.strategy').getAttribute('data-id');
+      let clickedStrategyData = getClickedData(clickedStrategyId);
+
+      renderArticleModalWindow(clickedStrategyData);
+    }
+  })
+}
+
+const getClickedData = (id) => {
+  return data.find(article => article.id == id)
+}
+
+const renderArticleModalWindow = (article) => {
+  let modal = new ArticleModal('article-modal', article);
+  modal.renderModal();
 }
